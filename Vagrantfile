@@ -5,6 +5,7 @@ $script = <<SCRIPT
 echo "Populating Manifest Files"
 yum install -y git
 cd /tmp && git clone https://github.com/biggiemac/setup.git
+puppet apply /tmp/setup/test.pp
 SCRIPT
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
