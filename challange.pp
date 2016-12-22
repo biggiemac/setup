@@ -1,4 +1,4 @@
-# let's setup the repo, provided from puppetlabs
+# let's setup the requested repo, provided from puppetlabs
 vcsrepo { '/var/www/www.puppetlabs.com':
   ensure   => present,
   provider => git,
