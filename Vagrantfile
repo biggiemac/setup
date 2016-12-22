@@ -2,10 +2,10 @@
 # vi: set ft=ruby :
 
   $script = <<SCRIPT
-    echo "Populating Manifest Files"
+    echo "Configuring Challange VM"
     sudo service iptables stop
     yum install -y git
-    [ ! -d /tmp ] && git clone https://github.com/biggiemac/setup.git
+    [ ! -d /tmp/setup ] && cd /tmp && git clone https://github.com/biggiemac/setup.git
     puppet module install puppet-nginx --version 0.5.0
     puppet module install puppetlabs-vcsrepo --version 1.5.0
     puppet apply /tmp/setup/challange.pp
