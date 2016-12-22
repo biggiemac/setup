@@ -9,7 +9,7 @@
     puppet module install puppet-nginx --version 0.5.0
     puppet module install puppetlabs-vcsrepo --version 1.5.0
     puppet apply /tmp/setup/challange.pp
-  SCRIPT
+SCRIPT
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
