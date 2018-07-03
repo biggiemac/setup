@@ -4,7 +4,8 @@
   $script = <<SCRIPT
     echo "Configuring Challange VM"
     sudo service iptables stop
-    yum install -y git curl
+    sudo yum update -y nss curl libcurl
+    yum install -y git telnet
     [ ! -d /tmp/setup ] && cd /tmp && git clone https://github.com/biggiemac/setup.git
     puppet module install puppet-nginx --version 0.5.0
     puppet module install puppetlabs-vcsrepo --version 1.5.0
